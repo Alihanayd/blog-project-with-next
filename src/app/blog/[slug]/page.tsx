@@ -8,10 +8,7 @@ type ParamsType = {
 
 const getPost = cache(async (slug: string) => await getPostNotCached(slug));
 
-export async function generateMetadata(
-  { params }: { params: ParamsType },
-  parent: { description?: string }
-) {
+export async function generateMetadata({ params }: { params: ParamsType }) {
   try {
     const { frontmatter } = await getPost(params.slug);
     return frontmatter;
