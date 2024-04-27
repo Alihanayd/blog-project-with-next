@@ -15,7 +15,7 @@ export async function getPost(slug: string) {
   return await compileMDX({
     source,
     components: {
-      h1: (props) => <H1 {...props} />,
+      h1: (props) => <H1 {...props}>{props.children}</H1>,
     },
     options: {
       parseFrontmatter: true,
