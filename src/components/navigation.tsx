@@ -7,7 +7,7 @@ export default function Navigation() {
     <nav className="font-mono">
       <ul className="flex md:space-x-4 flex-col md:flex-row">
         <li>
-          <Link href="/" className={styles.Link}>
+          <Link href="/" className={`${styles.Link} inline md:hidden`}>
             Home
           </Link>
         </li>
@@ -15,10 +15,10 @@ export default function Navigation() {
           <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/about/projects">Projects</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </nav>
